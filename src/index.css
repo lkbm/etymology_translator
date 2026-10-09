@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* App layout */
+.app {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.75rem 1rem;
+	border-bottom: 1px solid #e0e0e0;
+	background: #fafafa;
+}
+
+.header h1 {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+/* Legend */
+.legend {
+	display: flex;
+	gap: 0.75rem;
+	flex-wrap: wrap;
+}
+
+.legend-item {
+	font-size: 0.8rem;
+	font-weight: 600;
+	padding: 0.15rem 0.5rem;
+	border-radius: 3px;
+}
+
+/* Split pane */
+.split-pane {
+	display: flex;
+	flex: 1;
+	min-height: 0;
+}
+
+.editor-pane {
+	flex: 1;
+	padding: 1rem;
+	border: none;
+	border-right: 1px solid #e0e0e0;
+	resize: none;
+	outline: none;
+	font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+.preview-pane {
+	flex: 1;
+	padding: 1rem;
+	overflow-y: auto;
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+/* Etymology colors */
+.etym-latin {
+	color: #c62828;
+}
+.etym-french {
+	color: #e65100;
+}
+.etym-greek {
+	color: #7b2d8e;
+}
+.etym-anglo-saxon {
+	color: #2e7d32;
+}
+.etym-germanic {
+	color: #00838f;
+}
+.etym-old-norse {
+	color: #1a6fb5;
+}
+.etym-celtic {
+	color: #4e342e;
+}
+.etym-unknown {
+	color: #616161;
+}
+
+/* Markdown content */
+.preview-pane h1,
+.preview-pane h2,
+.preview-pane h3 {
+	margin: 0.75em 0 0.25em;
+}
+
+.preview-pane p {
+	margin: 0.5em 0;
+}
+
+.preview-pane code {
+	background: #f5f5f5;
+	padding: 0.15em 0.3em;
+	border-radius: 3px;
+	font-size: 0.9em;
+}
+
+.preview-pane pre code {
+	display: block;
+	padding: 0.75em;
+	overflow-x: auto;
+}
+
+.preview-pane blockquote {
+	border-left: 3px solid #ccc;
+	padding-left: 0.75em;
+	color: #555;
+}
+
+.preview-pane ul,
+.preview-pane ol {
+	padding-left: 1.5em;
+}
+/* Highlighted words open the synonym panel */
+.preview-pane span[class^='etym-'] {
+	cursor: pointer;
+}
+
+.preview-pane span[class^='etym-']:hover {
+	text-decoration: underline;
+}
+
+/* Synonym panel */
+.synonym-panel {
+	width: 20rem;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	border-left: 1px solid #e0e0e0;
+	background: #fafafa;
+}
+
+.synonym-search {
+	display: flex;
+	gap: 0.5rem;
+	padding: 0.75rem;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.synonym-search input {
+	flex: 1;
+	min-width: 0;
+	padding: 0.35rem 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font: inherit;
+	font-size: 0.9rem;
+}
+
+.synonym-close {
+	border: none;
+	background: none;
+	font-size: 1.25rem;
+	line-height: 1;
+	color: #616161;
+	cursor: pointer;
+	padding: 0 0.25rem;
+}
+
+.synonym-body {
+	flex: 1;
+	overflow-y: auto;
+	padding: 0.75rem;
+}
+
+.synonym-status {
+	font-size: 0.85rem;
+	color: #616161;
+	margin-bottom: 0.5rem;
+}
+
+.synonym-headword {
+	display: flex;
+	align-items: baseline;
+	gap: 0.5rem;
+	font-size: 1.15rem;
+	margin-bottom: 0.5rem;
+}
+
+.synonym-origin {
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: #616161;
+}
+
+.synonym-group {
+	margin-top: 0.75rem;
+}
+
+.synonym-group h3 {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	margin-bottom: 0.25rem;
+}
+
+.synonym-same {
+	color: #9e9e9e;
+	text-transform: none;
+	letter-spacing: 0;
+	font-weight: 400;
+}
+
+.synonym-group ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+}
+
+.synonym-group li {
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.synonym-word {
+	border: none;
+	background: none;
+	font: inherit;
+	font-size: 0.85rem;
+	padding: 0.15rem 0.45rem;
+	cursor: pointer;
+	text-align: left;
+}
+
+.synonym-word:hover {
+	text-decoration: underline;
+}
+
+/* Closeness bar along the bottom of each chip */
+.synonym-score {
+	height: 2px;
+	background: currentColor;
+	opacity: 0.35;
+}

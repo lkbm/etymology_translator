@@ -1,0 +1,32 @@
+{
+	"name": "etymology_highlighter",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "cf dev",
+		"build": "tsc -b && cf build",
+		"lint": "eslint .",
+		"preview": "vite preview",
+		"deploy": "cf deploy"
+	},
+	"dependencies": {
+		"marked": "^17.0.5",
+		"preact": "^10.29.0"
+	},
+	"devDependencies": {
+		"@cloudflare/vite-plugin": "^2.0.0-beta.sha-52b0dc0e9",
+		"@cloudflare/workers-types": "^4.20260317.1",
+		"@eslint/js": "^10.0.1",
+		"@preact/preset-vite": "^2.10.5",
+		"@types/node": "^25.5.0",
+		"cf": "^1.0.0-beta.13",
+		"eslint": "^10.1.0",
+		"eslint-plugin-react-hooks": "^7.0.1",
+		"globals": "^17.4.0",
+		"rollup-plugin-visualizer": "^7.0.1",
+		"typescript": "~6.0.2",
+		"typescript-eslint": "^8.57.2",
+		"vite": "^8.0.2"
+	}
+}
