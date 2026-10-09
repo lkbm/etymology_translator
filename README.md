@@ -1,5 +1,7 @@
 # Etymology Editor
 
+Latest Deployment: https://etymology-translator.lkbm.workers.dev/
+
 Years ago, I had the thought that you could add an interesting tone to character dialog by having certain characters speak in mostly-Anglo-Saxon derived words, or mostly-Latin-based words, etc.
 
 But doing that manually is hard! (I do recommend considering doing it by hand if you want to develop a "feel" for etymology.)
